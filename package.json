@@ -1,0 +1,30 @@
+{
+  "name": "flow-recall",
+  "version": "0.0.1",
+  "description": "Get caught up",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "shared"
+  ],
+  "scripts": {
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:backend": "npm run watch --workspace=backend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "build:backend": "npm run build --workspace=backend",
+    "build:all": "npm run build:backend && npm run build:frontend",
+    "deploy": "npm run build:all && npm run cdk:deploy --workspace=backend",
+    "test": "npm run test --workspaces"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react-router-dom": "^7.13.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "fast-check": "^4.5.3"
+  }
+}

@@ -1,0 +1,31 @@
+.page-stub {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-stub h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+  color: #1a1a1a;
+}
+
+.stub-content {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 48px 32px;
+  text-align: center;
+}
+
+.stub-content p {
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+}
+
+.stub-content p:last-child {
+  margin-bottom: 0;
+}

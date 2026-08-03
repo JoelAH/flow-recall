@@ -1,0 +1,222 @@
+.gmail-integration-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.2s;
+}
+
+.gmail-integration-card:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.gmail-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.gmail-icon {
+  font-size: 48px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.gmail-info {
+  flex: 1;
+}
+
+.gmail-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 6px 0;
+}
+
+.gmail-info p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.gmail-card-body {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 20px;
+}
+
+.gmail-status-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Connect Button */
+.gmail-connect-btn {
+  width: 100%;
+  padding: 10px 20px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gmail-connect-btn:hover {
+  background: #2563eb;
+}
+
+.gmail-connect-btn:active {
+  transform: scale(0.98);
+}
+
+/* Loading State */
+.gmail-loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: gmail-spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes gmail-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gmail-status-text {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Connected State */
+.gmail-connected-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gmail-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.gmail-status-connected {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.gmail-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  animation: gmail-pulse 2s ease-in-out infinite;
+}
+
+@keyframes gmail-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.gmail-connected-email {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.gmail-connected-date {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.gmail-disconnect-btn {
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #dc2626;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: fit-content;
+}
+
+.gmail-disconnect-btn:hover {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.gmail-disconnect-btn:active {
+  transform: scale(0.98);
+}
+
+/* Error State */
+.gmail-error-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+}
+
+.gmail-error-icon {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.gmail-error-message p {
+  font-size: 14px;
+  color: #991b1b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gmail-integration-card {
+    padding: 20px;
+  }
+
+  .gmail-card-header {
+    gap: 12px;
+  }
+
+  .gmail-icon {
+    font-size: 40px;
+  }
+
+  .gmail-info h3 {
+    font-size: 16px;
+  }
+
+  .gmail-info p {
+    font-size: 13px;
+  }
+}

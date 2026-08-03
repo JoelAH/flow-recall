@@ -1,0 +1,48 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "bin": {
+    "backend": "bin/backend.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "NODE_OPTIONS='--max-old-space-size=4096' jest",
+    "cdk": "npx cdk",
+    "cdk:deploy": "npx cdk deploy --all",
+    "cdk:destroy": "npx cdk destroy --all",
+    "cdk:diff": "npx cdk diff",
+    "cdk:synth": "npx cdk synth",
+    "predeploy:analysis": "node scripts/pre-deploy-validation.js",
+    "deploy:analysis": "npm run build && npx cdk deploy --all",
+    "postdeploy:analysis": "node scripts/post-deploy-smoke-tests.js",
+    "validate:deployment": "node scripts/pre-deploy-validation.js",
+    "smoke:test": "node scripts/post-deploy-smoke-tests.js"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.7.9",
+    "aws-cdk": "2.1004.0",
+    "esbuild": "^0.27.3",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.1000.0",
+    "@aws-sdk/client-cloudformation": "^3.1000.0",
+    "@aws-sdk/client-cloudwatch": "^3.1000.0",
+    "@aws-sdk/client-dynamodb": "^3.993.0",
+    "@aws-sdk/client-kms": "^3.995.0",
+    "@aws-sdk/client-lambda": "^3.1000.0",
+    "@aws-sdk/client-ssm": "^3.995.0",
+    "@aws-sdk/lib-dynamodb": "^3.995.0",
+    "@types/uuid": "^10.0.0",
+    "aws-cdk-lib": "2.181.1",
+    "constructs": "^10.0.0",
+    "googleapis": "^171.4.0",
+    "uuid": "^13.0.0"
+  }
+}
